@@ -11,9 +11,9 @@
 	"types": "./dist/vue-local-scope.d.ts",
 	"exports": {
 		".": {
+			"types": "./dist/vue-local-scope.d.ts",
 			"import": "./dist/vue-local-scope.js",
-			"require": "./dist/vue-local-scope.umd.cjs",
-			"types": "./dist/vue-local-scope.d.ts"
+			"require": "./dist/vue-local-scope.umd.cjs"
 		}
 	},
 	"repository": {

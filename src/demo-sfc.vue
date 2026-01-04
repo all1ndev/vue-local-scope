@@ -5,11 +5,10 @@ defineProps<{ lorem: string }>();
 </script>
 
 <template>
-	<LocalScope :lorem="lorem" #default="{ lorem }">
+	<LocalScope :lorem="lorem" #default="props">
 		<ol>
-			<li>{{ lorem }}</li>
-			<li>{{ lorem }}</li>
-			<li>{{ lorem }}</li>
+			<li>{{ props.lorem }}</li>
+			<li>{{ JSON.stringify(props) }}</li>
 		</ol>
 	</LocalScope>
 </template>
