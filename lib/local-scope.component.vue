@@ -1,7 +1,7 @@
-<script setup lang="ts" generic="T">
+<script setup lang="ts" generic="T extends Record<string, unknown>">
 defineOptions({ inheritAttrs: false });
 defineProps</* @vue-ignore */ T>();
-defineSlots<{ default?(props: T): any }>();
+defineSlots<{ default?(props: T): unknown }>();
 </script>
 
 <template>
