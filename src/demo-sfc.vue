@@ -1,13 +1,19 @@
 <script setup lang="ts" generic="T">
 import { LocalScope } from "../lib/vue-local-scope";
 
-defineProps<{ lorem: string }>();
+interface Props {
+	lorem: string;
+	ipsum: { text: string };
+}
+
+defineProps<Props>();
 </script>
 
 <template>
-	<LocalScope :lorem="lorem" #default="props">
+	<LocalScope #default="props" :lorem="lorem" :ipsum="ipsum">
 		<ol>
 			<li>{{ props.lorem }}</li>
+			<li>{{ props.ipsum.text }}</li>
 			<li>{{ JSON.stringify(props) }}</li>
 		</ol>
 	</LocalScope>
