@@ -1,4 +1,4 @@
-# @allindevelopers/vue-local-scope
+# @all1ndev/vue-local-scope
 
 > An implementation of [posva/vue-local-scope](https://github.com/posva/vue-local-scope) for Vue 3 and TypeScript support
 
@@ -6,15 +6,18 @@ Allows to reuse an expression that is repeating multiple times in a Vue Template
 
 ```vue
 <script setup lang="ts">
-import { LocalScope } from "@allindevelopers/vue-local-scope";
+import { LocalScope } from "@all1ndev/vue-local-scope";
 </script>
 
 <template>
-	<LocalScope lorem="Lorem Ipsum Dolor Sit Amet" #default="{ lorem }">
+	<LocalScope
+		lorem="Lorem Ipsum Dolor Sit Amet"
+		lorem-ipsum="dolor"
+		#default="props"
+	>
 		<ol>
-			<li>{{ lorem }}</li>
-			<li>{{ lorem }}</li>
-			<li>{{ lorem }}</li>
+			<li>{{ props.lorem }}</li>
+			<li>{{ props.loremIpsum }}</li>
 		</ol>
 	</LocalScope>
 </template>
